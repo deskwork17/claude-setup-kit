@@ -1,0 +1,16 @@
+# Obsidian per-device state
+.obsidian/workspace*.json
+.obsidian/cache
+.trash/
+
+# Plugin settings can hold API keys and certificates (Local REST API does)
+.obsidian/plugins/*/data.json
+
+# Claude machine-local files
+.claude/settings.local.json
+.claude/*.log
+
+# OS junk
+Thumbs.db
+desktop.ini
+.DS_Store
