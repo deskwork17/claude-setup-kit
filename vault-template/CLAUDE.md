@@ -11,6 +11,8 @@ This folder is an Obsidian vault used as a personal wiki. Claude reads and write
 - `Session notes/`: one file per Claude session, `YYYY-MM-DD.md`, written by `/end`.
 - `Templates/`: page templates. Don't add content here.
 
+`.claude/onboarding.md` records the user's use cases, active projects and what was set up during onboarding. Read it when context about the user's goals would help. `/onboard` reruns the setup interview.
+
 The user sets the organization as they go. When they settle on a new folder or page convention, record it in this file under **Conventions** so future sessions follow it.
 
 ## Working conventions

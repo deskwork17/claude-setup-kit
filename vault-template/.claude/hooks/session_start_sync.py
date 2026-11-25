@@ -49,13 +49,27 @@ def github_check():
     )
 
 
+def onboarding_check():
+    if (REPO / ".claude" / "onboarding.md").exists():
+        return None
+    return (
+        "Onboarding hasn't been done for this vault yet (.claude/onboarding.md is missing). "
+        "Before anything else, greet the user and run the onboarding procedure in "
+        ".claude/commands/onboard.md: ask about their use case, suggest skills, commands, "
+        "hooks, connectors and a vault layout for their projects, build only what they "
+        "approve, then write .claude/onboarding.md. If the user wants to skip it for now, "
+        "do their task instead and mention they can run /onboard later."
+    )
+
+
 def main():
-    msg, context = github_check()
+    msg, git_context = github_check()
+    contexts = [c for c in (git_context, onboarding_check()) if c]
     out = {"systemMessage": msg}
-    if context:
+    if contexts:
         out["hookSpecificOutput"] = {
             "hookEventName": "SessionStart",
-            "additionalContext": context,
+            "additionalContext": "\n\n".join(contexts),
         }
     print(json.dumps(out))
 

@@ -17,6 +17,8 @@ A general-purpose Claude Code setup for Windows: Python, Node.js, Git and GitHub
 
    Claude will tell you when each one comes up.
 
+4. The first time you open Claude Code inside your new vault, it asks what you'll use it for. It then suggests skills, shortcuts, automations and a folder layout for your projects, and sets up whichever ones you pick. You can rerun this any time with `/onboard`.
+
 Nothing in this kit holds anyone's passwords, keys or personal details. You'll set up your own.
 
 ## What's in here
@@ -26,5 +28,5 @@ Nothing in this kit holds anyone's passwords, keys or personal details. You'll s
 | `SETUP.md` | Step-by-step instructions for Claude to follow |
 | `global/CLAUDE.md` | Your preferences that apply to every Claude session; edit freely |
 | `global/machine_setup.md` | A running inventory of installed tools, which Claude keeps updated |
-| `vault-template/` | A starter Obsidian wiki: its `CLAUDE.md` rules, a Home page, folders, a `/end` command and a git sync hook |
+| `vault-template/` | A starter Obsidian wiki: its `CLAUDE.md` rules, a Home page, folders, the `/onboard` and `/end` commands, and a start-up hook that syncs git and triggers onboarding |
 | `scripts/register_obsidian_mcp.ps1` | Connects Claude to your vault (you run it yourself, since it handles the plugin's API key) |

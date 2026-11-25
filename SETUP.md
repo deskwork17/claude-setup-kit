@@ -120,7 +120,7 @@ If the user said no, leave the hook in place. It reports "not a repo" and does n
 
 ## 8. Finish
 
-1. Have the user restart Claude Code **inside the vault folder**. Run a quick test: create `Inbox/Test note.md` through the Obsidian MCP tools, then delete it.
+1. Have the user restart Claude Code **inside the vault folder**. The start-up hook will then trigger **onboarding** (`.claude/commands/onboard.md`): Claude asks what the user wants it for, then suggests skills, commands, hooks, connectors and a vault layout for their projects. Tell the user to expect this. They can skip it and run `/onboard` later. During that first session, run a quick test: create `Inbox/Test note.md` through the Obsidian MCP tools, then delete it.
 2. Check `machine_setup.md` lists everything you installed.
 3. Give the user a short summary:
    - what was installed;
